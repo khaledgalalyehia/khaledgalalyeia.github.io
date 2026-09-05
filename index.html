@@ -29,6 +29,11 @@
             background-color: var(--bg-light);
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
         }
 
         header {
@@ -55,10 +60,14 @@
         .contact-info {
             font-size: 0.95rem;
             color: #cbd5e1;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
         }
 
         .contact-info span {
-            margin: 0 10px;
+            margin: 0 5px;
         }
 
         .contact-info a {
@@ -115,13 +124,6 @@
             border-bottom: 2px solid var(--accent);
         }
 
-        @media (max-width: 768px) {
-            .nav-container {
-                justify-content: flex-start;
-                gap: 1.5rem;
-            }
-        }
-
         .container {
             max-width: 1200px;
             margin: 2.5rem auto;
@@ -161,6 +163,7 @@
             padding-bottom: 0.5rem;
             margin-top: 0;
             font-size: 1.75rem;
+            word-break: break-word;
         }
 
         h3 {
@@ -171,7 +174,7 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 1.5rem;
         }
@@ -184,12 +187,14 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            overflow: hidden;
         }
 
         .card h4 {
             margin-top: 0;
             color: var(--primary);
             font-size: 1.15rem;
+            word-break: break-word;
         }
 
         .slider-wrapper {
@@ -215,24 +220,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-
-        .screenshot-box {
-            background: #e2e8f0;
-            border: 2px dashed #94a3b8;
-            border-radius: 6px;
-            height: 240px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #475569;
-            font-weight: 500;
-            font-size: 0.9rem;
-            text-align: center;
-            padding: 1rem;
-            filter: blur(0.3px);
-            width: 100%;
-            box-sizing: border-box;
         }
 
         .dashboard-img {
@@ -292,6 +279,7 @@
         li {
             margin-bottom: 0.4rem;
             font-size: 0.95rem;
+            word-break: break-word;
         }
 
         footer {
@@ -300,6 +288,30 @@
             background-color: var(--primary);
             color: #94a3b8;
             font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 2.5rem 1rem;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+            section {
+                padding: 1.5rem 1rem;
+            }
+            .container {
+                padding: 0 1rem;
+                margin: 1.5rem auto;
+            }
+            .nav-container {
+                justify-content: flex-start;
+                gap: 1.5rem;
+            }
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -555,7 +567,7 @@
             </div>
         </div>  
             <div class="grid">
-
+                
                 <div class="card">
                     <div>
                         <h4>Strategy Planning and Management</h4>
@@ -570,21 +582,20 @@
                 <div class="card">
                     <div>
                         <h4>Strategic Financial Modeling</h4>
-                        <p>Comprehensive, data-driven financial model projecting critical operational insights—including profit margins and Return on Investment (ROI)—for major healthcare and corporate infrastructure projects.</p>
+                        <p>Comprehensive, data-driven financial models projecting critical operational insights—including profit margins and Return on Investment (ROI)—for major healthcare and corporate infrastructure projects.</p>
                         <ul>
-                            <li>Financial Scenario Projections</li>
+                            <li>Hospital & Healthcare Unit Economics</li>
                             <li>Profitability & ROI Projection Matrices</li>
                         </ul>
                     </div>
                 </div>
-
                 <div class="card">
                     <div>
                         <h4>Job Evaluation & Grading Tooling</h4>
                         <p>Proprietary enterprise job evaluation and grading tool engineered for LOGIC Consulting and successfully deployed across 20+ client engagements to standardize organizational structures.</p>
                         <ul>
                             <li>Corporate Grading & Salary Scale Architecture</li>
-                            <li>Standardized Job Evaluation Model</li>
+                            <li>Standardized Organizational Restructuring Tool</li>
                         </ul>
                     </div>
                 </div>
